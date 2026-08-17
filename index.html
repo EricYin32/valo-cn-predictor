@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>瓦洛兰特 CN 胜负预测 · VCT 2026 第二赛段 季后赛</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./images/VCT.png">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><img src="./images/VCT.png" alt="VCT CN" style="width:1.2em; height:1.2em; vertical-align:-0.2em; margin-right:8px;">VCT CN 胜负预测中心</h1>
+      <p>无畏契约中国职业联赛 · 基于生死将选手发挥的 AI 预测模型</p>
+      <div class="status-bar" id="statusBar">
+        <div><span class="dot"></span>加载中...</div>
+      </div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="predictions" onclick="switchTab('predictions')">🔮 即将比赛预测</button>
+      <button class="tab-btn" data-tab="history" onclick="switchTab('history')">📜 历史比分</button>
+      <button class="tab-btn" data-tab="teams" onclick="switchTab('teams')">🏟️ 战队选手</button>
+    </div>
+
+    <section class="section active" id="predictions">
+      <div id="predictionsList"></div>
+    </section>
+
+    <section class="section" id="history">
+      <div id="historyList"></div>
+    </section>
+
+    <section class="section" id="teams">
+      <div class="teams-grid" id="teamsList"></div>
+    </section>
+
+    <div class="footer">
+      VCT CN Prediction Model · 生死将权重系统 · 每日 23:59 自动刷新<br>
+      数据仅供参考 · 不构成任何博彩建议
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="predictor.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
